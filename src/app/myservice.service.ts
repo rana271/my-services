@@ -9,7 +9,7 @@ export class MyserviceService {
 
   constructor(private _http: HttpClient) { }
   get(): Observable<any> {
-    return this._http.get('https://conduit.productionready.io/api/profiles/eric')
+    return this._http.get('http://localhost:3000/test')
     .pipe(map((response: any) => <any>response));
       // .do(data => console.log("All: " + JSON.stringify(data)))
     

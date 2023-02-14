@@ -1,4 +1,25 @@
 <div>
  <h1>Check the Services</h1>
- {{ profile | json }}
+ <!-- {{ profile | json }} -->
+ <table>
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>AnualSalary</th>
+            <th>Date of Birth</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of profile">
+            <td>{{employee.code}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.anualSalary}}</td>
+            <td>{{employee.dateofBirth}}</td>
+        </tr>
+    </tbody>
+</table>
+
 </div>
